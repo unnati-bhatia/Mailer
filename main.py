@@ -30,7 +30,7 @@ for i in range(len(contacts)):
     msg['Subject'] = 'Subject Title'
     msg['From'] = EMAIL_ADDRESS
     msg['To'] = contacts[i]
-    with open(images[i], 'rb') as f:
+    with open(files[i], 'rb') as f:
         file_data = f.read()
         #file_type = imghdr.what(f.name)
         file_name = names[i]
