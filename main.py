@@ -1,5 +1,6 @@
 import openpyxl as xl
 import smtplib
+#import imghdr
 from email.message import EmailMessage
 
 EMAIL_ADDRESS = '(abc)' #to be written
