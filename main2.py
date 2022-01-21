@@ -8,7 +8,7 @@ sheet1 = wb["Sheet1"]
 
 names = []
 contacts = []
-images = []
+files = []
 
 for cell in sheet1['A']:
     contacts.append(cell.value)
@@ -17,7 +17,7 @@ for cell in sheet1['B']:
     names.append(cell.value)
 
 for cell in sheet1['C']:
-    images.append(cell.value)
+    files.append(cell.value)
 
 for i in range(len(contacts)):
     message = Mail(from_email='(abc)', #to be written
@@ -26,7 +26,7 @@ for i in range(len(contacts)):
                    html_content= '''
     (html file here) ''')
 
-    with open(images[i], 'rb') as f:
+    with open(files[i], 'rb') as f:
         data = f.read()
         f.close()
     encoded_file = base64.b64encode(data).decode()
