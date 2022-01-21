@@ -15,7 +15,8 @@
   
 
 ### API key for main2.py:
-    Generated via https://sendgrid.com/ 
+    Generated via :
+        https://sendgrid.com/ 
     
 
 
