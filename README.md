@@ -8,4 +8,14 @@
       - column C : image path
 
 
+### To replace pdf with images:
+    Code for adding attachment 
+      - maintype = 'image' 
+      - subtype = imghdr.what(f.name)
+  
+
+### API key for main2.py:
+    Generated via https://sendgrid.com/ 
+    
+
 
