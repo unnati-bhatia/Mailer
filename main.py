@@ -1,9 +1,6 @@
 import openpyxl as xl
 import smtplib
-#import imghdr
 from email.message import EmailMessage
-import os
-from PIL import Image
 
 EMAIL_ADDRESS = '(abc)' #to be written
 EMAIL_PASSWORD = '(abc)'  #to be written
@@ -34,7 +31,10 @@ for i in range(len(contacts)):
         file_data = f.read()
         #file_type = imghdr.what(f.name)
         file_name = names[i]
-    msg.set_content("Hello, etc")
+        
+    msg.set_content('''
+    xyz''',  subtype='html')
+    
     msg.add_attachment(file_data, maintype='application', subtype='pdf', filename=file_name)
 
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
